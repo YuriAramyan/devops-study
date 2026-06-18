@@ -1,1 +1,44 @@
-Barev
+1.Եթե Չի լինում Ցանացային պապկա կպնել
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
+AllowInsecureGuestAuth
+
+2.Եթե չի լինում ինչ որ բան տեղադրել
+HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows
+Щелкните правой кнопкой на папке Windows, выберите New → Key и назовите его Installer.
+
+Откройте созданную папку Installer, щелкните правой кнопкой в правом окне → New → DWORD (32-bit) Value.
+
+Назовите параметр DisableMSI и установите его значение в 0.
+
+Закройте реестр и перезагрузите сервер.
+
+3.Եթե չի ստորագրում 
+
+Computer Configuration -> Administrative Templates -> Windows Components -> Remote Desktop Services -> Remote Desktop Connection Client -> Device and Resource Redirection
+4.Activator
+irm https://get.activated.win | iex
+5. Sound
+Computer Configuration → Admin Templates → Windows Components → Remote Desktop Services → Remote Desktop Session Host → Device and Resource Redirection
+
+6.Chrome Block location
+HKEY_LOCAL_MACHINE
+└── SOFTWARE
+    └── Policies
+        └── Google
+            └── Chrome 
+Правый клик → Создать → Параметр DWORD (32 бита)
+DefaultGeolocationSetting = 2
+
+Check (chrome://policy)
+Set-SmbClientConfiguration -RequireSecuritySignature $false
+7. 
+8.часавой поясь в АД
+w32tm /config /syncfromflags:domhier /update
+
+
+9. Перенаправление порта
+net use LPT2: "\\NektarHayrapetyan\Canon60" /persistent:yes
+
+10. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\GracePeriod  (Grace Period) 
+
+11.reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v ForceGuest /t REG_DWORD /d 0 /f (Misht parola uzum kpneuc)
