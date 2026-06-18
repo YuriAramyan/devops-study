@@ -42,3 +42,4 @@ net use LPT2: "\\NektarHayrapetyan\Canon60" /persistent:yes
 10. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\GracePeriod  (Grace Period) 
 
 11.reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v ForceGuest /t REG_DWORD /d 0 /f (Misht parola uzum kpneuc)
+Barev
